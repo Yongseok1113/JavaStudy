@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d55808c-8237-444a-941f-4f416f69bb8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Datastructure/Stack/Printer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Execute/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stack/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/Printer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -165,12 +162,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Execute" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Datastructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Datastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Queue" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -180,7 +171,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544768170288" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544769560881" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -222,16 +213,15 @@
       <workItem from="1544518114213" duration="138000" />
       <workItem from="1544519712638" duration="39000" />
       <workItem from="1544582513300" duration="17880000" />
-      <workItem from="1544758590837" duration="9107000" />
+      <workItem from="1544758590837" duration="9911000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27164000" />
+    <option name="totallyTimeSpent" value="27968000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1234" height="736" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22146508" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
