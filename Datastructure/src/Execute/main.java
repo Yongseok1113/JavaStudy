@@ -29,5 +29,12 @@ public class main {
         answer = printer.Solution(testCase3, 0);
         System.out.println(answer);
 
+        answer = printer.Solution2(testCase, 2);
+        System.out.println(answer);
+        answer = printer.Solution2(testCase2, 0);
+        System.out.println(answer);
+        answer = printer.Solution2(testCase3, 0);
+        System.out.println(answer);
+
     }
 }
