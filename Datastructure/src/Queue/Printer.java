@@ -17,7 +17,7 @@ import java.util.Queue;
 //priorities : 우선순위 값이 저장된 배열, location : 요청한 작업의 배열 인덱스(0부터 마지막)
 public class Printer {
 
-    //정확도 65점
+    //정확도 점수 : 65점
     public int Solution(int[] priorities, int location) {
         int answer = 0;
 
@@ -81,7 +81,7 @@ public class Printer {
     *
     */
 
-    //정확도 45점
+    //정확도 점수 : 45점
     public int Solution2(int[] priorities, int location) {
         int answer = 0;
         int [] deleteLowPriority = new int[priorities.length];
@@ -155,7 +155,6 @@ public class Printer {
         return 0;
     }//Solution2
 
-
     /*  풀이 전략 3 : 원형 배열 큐
     *   1. front확인.
     *   2. 우선순위가 더 높은 작업이 있는지 검사. (요청작업보다 우선순위가 높고 더 높은 우선순위가 없다면. 카운트 + 이탈
@@ -163,11 +162,84 @@ public class Printer {
     *   4. 요청작업의 위치가 계속 바뀜 (위치 관리해줘야 함)
     *   5. 요청작업일 때 우선순위가 더 높은 작업이 없다면, 카운트 + 루프 이탈 + 반환
     */
+    //정확도 점수 : 100점
     public int Solution3(int[] priorities, int location) {
-        int answer = 0;
+
+        int queueSize = priorities.length + 1;
+        int front = 1;
+        int rear = 0;
+        int frontIndex = 1;
+        int rearIndex =0;
+        int [] circularQueue = new int [queueSize];
+        int target = 0;
+        boolean isHighst = true;
+        int printCount = 1;
+
+        //타겟보다 우선 순위가 낮은 작업 필터링
+        for(int i=0; i<priorities.length; i++) {
+            if(priorities[i] >= priorities[location]) {
+                rearIndex = ++rear % queueSize;
+                if(i == location) {
+                    target = rearIndex;
+                }
+                circularQueue[rearIndex] = priorities[i];
+            }
+        }
+
+        int i = 1;
+        boolean flag = false;
+        while(flag == false) {
+            isHighst = true;
+
+            if(frontIndex < rearIndex) {
+                for(int j=frontIndex; j<=rearIndex; j++) {
+                    //리스트에서 확인중인 작업이 현재작업보다 큰 경우(우선순위가 높은 경우)
+                    if(circularQueue[j] > circularQueue[frontIndex]) {
+                        isHighst = false;
+                        break;
+                    }
+                }
+            }// if(frontIndex < rearIndex) end
+
+            else if(rearIndex < frontIndex) {
+                for(int j=frontIndex; j<queueSize; j++) {
+                    if(circularQueue[j] > circularQueue[frontIndex]) {
+                        isHighst = false;
+                        break;
+                    }
+                }
+                for(int j=0; j<=rearIndex; j++) {
+                    if(circularQueue[j] > circularQueue[frontIndex]) {
+                        isHighst = false;
+                        break;
+                    }
+                }
+            } //else if(rearIndex < frontIndex) end
+
+            if(isHighst) {
+                if(i == target) {
+                    //끝
+
+                    return printCount;
+                }
+                printCount++;
+                circularQueue[i] = 0;
+            }
+            else if(isHighst == false) {
+                rearIndex = ++rear % queueSize;
+                if(i == target) {
+                    target = rearIndex;
+                }
+                circularQueue[rearIndex] = circularQueue[i];
+                circularQueue[i] = 0;
+            }
+            frontIndex = ++front % queueSize;
+            i++;
+            i = i % queueSize;
+
+        }
 
 
-
-        return answer;
+        return printCount;
     }
 }
