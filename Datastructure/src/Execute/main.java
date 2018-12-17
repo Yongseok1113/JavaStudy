@@ -22,24 +22,19 @@ public class main {
         int[] testCase3 = {1, 1, 9, 1, 2, 1};
         int[] testCase4 = {3, 1, 9, 1, 2, 1};
         //[2, 1, 3, 2] , 2  -> Expected value : 1
-        answer = printer.Solution(testCase, 2);
+        answer = printer.Solution6(testCase, 2);
         System.out.println(answer);
         //[1, 1, 9, 1, 1, 1] , 0  -> Expected value : 5
-        answer = printer.Solution(testCase2, 0);
+        answer = printer.Solution6(testCase2, 0);
         System.out.println(answer);
         //[1, 1, 9, 1, 2, 1] , 0  -> Expected value : 4
-        answer = printer.Solution(testCase3, 0);
+        answer = printer.Solution6(testCase3, 0);
         System.out.println(answer);
+        //[3, 1, 9, 1, 2, 1] , 1  -> Expected value : 5
+        answer = printer.Solution6(testCase4, 1);
+        System.out.println(answer);
+
         System.out.println("========================  Solution end  =========================");
-        answer = printer.Solution3(testCase, 2);
-        System.out.println(answer);
-        answer = printer.Solution3(testCase2, 0);
-        System.out.println(answer);
-        answer = printer.Solution3(testCase3, 0);
-        System.out.println(answer);
-        //Expected value : 5
-        answer = printer.Solution3(testCase4, 1);
-        System.out.println(answer);
 
     }
 }
