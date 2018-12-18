@@ -299,6 +299,7 @@ public class Printer {
     }//solution4 end
 
     //정확도 점수 40점
+
     public int Solution5(int[] priorities, int location) {
         int answer = 1;
         ArrayList<Integer> waitProcessList = new ArrayList<>();

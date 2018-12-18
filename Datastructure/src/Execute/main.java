@@ -1,21 +1,23 @@
 package Execute;
 
+import Hash.Marathon;
 import Stack.Ironbar;
+
 import Queue.Printer;
 
 public class main {
     public static void main(String[] args) {
         int answer;
-        System.out.println("=========================  iron bar  =============================");
+        System.out.println("=========================  Ironbar  =============================");
         Ironbar ironbar = new Ironbar();
 
         //ironbar input : "(((()())(())()))(())" Expected value: 17 , "(((()())(())()))" Expected value : 15
         answer = ironbar.Solution("(((()())(())()))(())");
-        System.out.println(answer);
+        System.out.println("Expected value : 17 , Ironbar result1 : " + answer);
         answer = ironbar.Solution2("(((()())(())()))");
-        System.out.println(answer);
-
-        System.out.println("==========================  printer  =============================");
+        System.out.println("Expected value : 15 , Ironbar result2 : " + answer);
+/*
+        System.out.println("==========================  Printer  =============================");
         Printer printer = new Printer();
         int[] testCase = {2, 1, 3, 2};
         int[] testCase2 = {1, 1, 9, 1, 1, 1};
@@ -23,18 +25,33 @@ public class main {
         int[] testCase4 = {3, 1, 9, 1, 2, 1};
         //[2, 1, 3, 2] , 2  -> Expected value : 1
         answer = printer.Solution6(testCase, 2);
-        System.out.println(answer);
+        System.out.println("Expected value : 1 , Printer result1 : " + answer);
         //[1, 1, 9, 1, 1, 1] , 0  -> Expected value : 5
         answer = printer.Solution6(testCase2, 0);
-        System.out.println(answer);
+        System.out.println("Expected value : 5 , Printer result2 : " + answer);
         //[1, 1, 9, 1, 2, 1] , 0  -> Expected value : 4
         answer = printer.Solution6(testCase3, 0);
-        System.out.println(answer);
+        System.out.println("Expected value : 4 , Printer result3 : " + answer);
         //[3, 1, 9, 1, 2, 1] , 1  -> Expected value : 5
         answer = printer.Solution6(testCase4, 1);
-        System.out.println(answer);
+        System.out.println("Expected value : 5 , Printer result4 : " + answer);
+*/
+        System.out.println("===========================  Marathon  ==========================");
+        Marathon marathon = new Marathon();
+        String result;
+        String [] participate1 = {"leo", "kiki", "eden"};
+        String [] completion1 = {"eden", "kiki"};	// Expected value : "leo"
+        String [] participate2 = { "marina", "josipa", "nikola", "vinko", "filipa"};
+        String [] completion2 = {"josipa", "filipa", "marina", "nikola"};    //Expected value : "vinko"
+        String [] participate3 = {"mislav", "stanko", "mislav", "ana"};
+        String [] completion3 = {"stanko", "ana", "mislav"}; //Expected value : "mislav"
 
-        System.out.println("========================  Solution end  =========================");
+        result = marathon.Solution(participate1, completion1);
+        System.out.println("Expected value : leo , Marathon result1 : " + result);
+        result = marathon.Solution(participate2, completion2);
+        System.out.println("Expected value : vinko , Marathon result2 : " + result);
+        result = marathon.Solution(participate3, completion3);
+        System.out.println("Expected value : mislav , Marathon result3 : " + result);
 
     }
 }
