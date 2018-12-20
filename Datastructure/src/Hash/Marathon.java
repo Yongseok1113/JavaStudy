@@ -74,21 +74,33 @@ public class Marathon {
     * 확인하고 지우는 방식은 시간복잡도 너무 높음
     * O(n)유지해야함
     * */
-    public String Solution2(String[] participant, String[] completion) {
-        String answer = "";
-        HashMap hashMap = new HashMap();
 
+    //100점..
+    //데이터가 단 하나만 다른 상황에서 같은 방식으로 정렬한다면 같은 위치를 서로 비교할 때 다른 값이 미완주자일 것이다.
+    //예상대로 나왔지만 해시를 활용한 효율적인 자료관리가 아니다
+    //참고만 할 것
+    public String Solution2(String[] participant, String[] completion) {
         Arrays.sort(participant);
         Arrays.sort(completion);
 
         for(int i=0; i<completion.length; i++) {
-
-            if(participant[i] != completion[i]) {
+            if(!participant[i].equals(completion[i])) {
                 return participant[i];
             }
         }
-
         return participant[participant.length -1];
+    }
+    //해시맵을 활용한 풀이
+    public String Solution3 (String[] participant, String[] completion) {
+        String answer = "";
+        HashMap hashMap = new HashMap();
+
+        for(String element : completion)  {
+            hashMap.put(participant.hashCode(), participant);
+        }
+        //해싱방식을 잘못이해함.
+
+        return answer;
     }
 }
 
