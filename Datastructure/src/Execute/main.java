@@ -46,11 +46,11 @@ public class main {
         String [] participate3 = {"mislav", "stanko", "mislav", "ana"};
         String [] completion3 = {"stanko", "ana", "mislav"}; //Expected value : "mislav"
 
-        result = marathon.Solution2(participate1, completion1);
+        result = marathon.Solution4(participate1, completion1);
         System.out.println("Expected value : leo , Marathon result1 : " + result);
-        result = marathon.Solution2(participate2, completion2);
+        result = marathon.Solution4(participate2, completion2);
         System.out.println("Expected value : vinko , Marathon result2 : " + result);
-        result = marathon.Solution2(participate3, completion3);
+        result = marathon.Solution4(participate3, completion3);
         System.out.println("Expected value : mislav , Marathon result3 : " + result);
 
     }

@@ -68,6 +68,7 @@ public class Marathon {
         }
         return answer;
     }
+
     /*
     * 해시코드값이 같은데 문자가 아예 다른 경우도 있음
     * 확인하는 이름이 완전히 똑같은지 확인해야 함
@@ -96,10 +97,23 @@ public class Marathon {
         HashMap hashMap = new HashMap();
 
         for(String element : completion)  {
-            hashMap.put(participant.hashCode(), participant);
+            hashMap.put(completion.hashCode(), completion);
         }
-        //해싱방식을 잘못이해함.
 
+
+        return answer;
+    }
+    public String Solution4(String[] participant, String[] completion) {
+        String answer = "";
+        HashMap<String, Integer> hm = new HashMap<>();
+        for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
+        for (String player : completion) hm.put(player, hm.get(player) - 1);
+
+        for (String key : hm.keySet()) {
+            if (hm.get(key) != 0){
+                answer = key;
+            }
+        }
         return answer;
     }
 }
