@@ -20,16 +20,14 @@ package Hash;
 //풀이방법으로 해시를 선택한 이유 : 대용량 데이터셋, 부분검색
 //해싱
 //String의 부분검색이 가능한가?
+//문자열 부분검색 : contains, IndexOf, matches
 //
 
 public class Phonebook {
-    public boolean Solution(String phone_book) {
+    public boolean Solution(String[] phone_book) {
         boolean answer  = true;
 
-        for(int i=0; i<타겟길이; i++) {
-            if(타겟[i] != 리스트[i])
-                answer = false;
-        }
+
         return answer;
     }
 }

@@ -1,6 +1,7 @@
 package Execute;
 
 import Hash.Marathon;
+import Hash.Phonebook;
 import Stack.Ironbar;
 
 import Queue.Printer;
@@ -52,6 +53,20 @@ public class main {
         System.out.println("Expected value : vinko , Marathon result2 : " + result);
         result = marathon.Solution4(participate3, completion3);
         System.out.println("Expected value : mislav , Marathon result3 : " + result);
+
+        System.out.println("===========================  Phonebook  ==========================");
+        Phonebook phonebook = new Phonebook();
+        boolean phoneAnswer = true;
+
+        String[] testcase1 ={"119", "97674223", "1195524421"};      //Expected Value : false
+        String[] testcase2 ={"123", "456", "789"};                  //Expected Value : true
+        String[] testcase3 ={"12", "123", "1235", "567", "88"};     //Expected Value : false
+        phoneAnswer = phonebook.Solution(testcase1);
+        System.out.println("Expected value : false , Phonebook result1 : " + result);
+        phoneAnswer = phonebook.Solution(testcase1);
+        System.out.println("Expected value : true , Phonebook result1 : " + result);
+        phoneAnswer = phonebook.Solution(testcase1);
+        System.out.println("Expected value : false , Phonebook result1 : " + result);
 
     }
 }
