@@ -62,11 +62,11 @@ public class main {
         String[] testcase2 ={"123", "456", "789"};                  //Expected Value : true
         String[] testcase3 ={"12", "123", "1235", "567", "88"};     //Expected Value : false
         phoneAnswer = phonebook.Solution(testcase1);
-        System.out.println("Expected value : false , Phonebook result1 : " + result);
-        phoneAnswer = phonebook.Solution(testcase1);
-        System.out.println("Expected value : true , Phonebook result1 : " + result);
-        phoneAnswer = phonebook.Solution(testcase1);
-        System.out.println("Expected value : false , Phonebook result1 : " + result);
+        System.out.println("Expected value : false , Phonebook result1 : " + phoneAnswer);
+        phoneAnswer = phonebook.Solution(testcase2);
+        System.out.println("Expected value : true , Phonebook result1 : " + phoneAnswer);
+        phoneAnswer = phonebook.Solution(testcase3);
+        System.out.println("Expected value : false , Phonebook result1 : " + phoneAnswer);
 
     }
 }
