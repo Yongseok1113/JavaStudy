@@ -58,14 +58,14 @@ public class main {
         Phonebook phonebook = new Phonebook();
         boolean phoneAnswer = true;
 
-        String[] testcase1 ={"119", "97674223", "1195524421"};      //Expected Value : false
+        String[] testcase1 ={"119", "97674", "11955", "119", "11911", "11922"};      //Expected Value : false
         String[] testcase2 ={"123", "456", "789"};                  //Expected Value : true
         String[] testcase3 ={"12", "123", "1235", "567", "88"};     //Expected Value : false
-        phoneAnswer = phonebook.Solution(testcase1);
+        phoneAnswer = phonebook.Solution2(testcase1);
         System.out.println("Expected value : false , Phonebook result1 : " + phoneAnswer);
-        phoneAnswer = phonebook.Solution(testcase2);
+        phoneAnswer = phonebook.Solution2(testcase2);
         System.out.println("Expected value : true , Phonebook result1 : " + phoneAnswer);
-        phoneAnswer = phonebook.Solution(testcase3);
+        phoneAnswer = phonebook.Solution2(testcase3);
         System.out.println("Expected value : false , Phonebook result1 : " + phoneAnswer);
 
     }

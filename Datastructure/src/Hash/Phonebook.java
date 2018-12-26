@@ -38,7 +38,7 @@ package Hash;
 //다른값을 맨앞에서 부터 시작하여 완전히 포함하는 값이 있는지 확인하는 문제
 
 
-import java.util.HashMap;
+import java.util.*;
 
 
 public class Phonebook {
@@ -49,6 +49,12 @@ public class Phonebook {
     *   값을 해시맵에 추가하는 과정에서 키 중복이 일어난다면, (최소길이 까지는 접두사일 가능성이 존재한다)
     *   이 때 (확인하는 전화번호가 해시맵에 저장된 값을 포함 또는 저장된값이 확인하는 전화번호를 포함) 하면
     *   즉, 둘 중 하나가 접두사로 사용되면 false를 리턴한다.
+    *
+    *   ["1234", "6543219", "6543218", "65432199"] Expected value : false , Result : true
+    *   최소길이만큼 같으면서 서로 다른 경우가 생기면 키가 덮어씌워진다.
+    *   A저장, A와 최소길이부분이 같지만 나머지는 다른 B저장(B로 덮어씌워짐), A를 접두어로 쓰는 C확인 false가 되어야하지만,
+    *   덮어씌워져 A정보가 사라졌기 때문에 체크하지 못함.
+    *   잘못된 해결방법.
     *
     * */
     public boolean Solution(String[] phone_book) {
@@ -71,4 +77,105 @@ public class Phonebook {
         }
         return answer;
     }
+    //다른사람 풀이는 정렬 후 패턴탐색이 대부분임. N제곱 시간이지만 배열 정렬 탐색이라 매우 빠른 것 같음.
+
+    //해시 저장 과정과 검색 과정이 동시에 처리되선 안됨.
+    //정렬은 고려할만함. 길이가짧고 접두가 같아지는 순으로 정렬될 것임.
+    //정렬 2중for문 패턴탐색보다 효율적이기 힘들다.
+
+    //이 문제를 해시로 풀려면, 서로 접두어가 될수 있는 가능성이 있는 것들을 쉽게 탐색할 수 있어야 한다.
+    //해시맵 버킷이 서로 연관된 여러 value를 보는 기능을 제공하기 위해서는 키 중복을 허용해야 한다.
+    //HashMap 클래스에 해시충돌 회피 구현이 되어있지 않다. (키중복을 허용하지 않는다.)
+    //Seperate Chainnig 을 구현하여 해결해보자.
+
+    //키 중복 없이 구현하는 시나리오
+    //1버킷 1정보, 버킷간 관련성을 찾기 위해서는 value 중복 할 수 밖에 없음.
+    //원본 값중 최소길이까지 잘라 value에 보관한다면 키는 원본 값이 되어야 함.
+    //원본에서 최소길이만큼 자른 문자열이 해시에 존재하면 해시를 확인하면서 같은 value의 키를 받아 원본과 비교한다.
+    //이 방법도 결국 이중반복으로 하나하나 모두 찾아야 한다.
+    //해시 전체를 확인하지 않기 위해서는 관련 키별로 리스트를 짜는 수 밖에 없음.
+
+
+    //java에서 해시맵은 덮어씌우는 것이 아니었음. chainning 방식으로 해시 충돌 허용하고있음. 8개미안 - LinkedList
+    //8개 이상 - tree
+
+    //출처 - 스택오버플로우 , 검색된 제목 : Java: Hashtable stores multiple items with same hash in one bucket
+    //https://stackoverflow.com/questions/26287852/java-hashtable-stores-multiple-items-with-same-hash-in-one-bucket
+
+    //덮어 씌워지는 것처럼 보이는 이유는 equals,와 hashcode 재정의 하지 않아서.
+    //
+
+
+
+
+    //http://iilii.egloos.com/4000476
+    //http://anster.tistory.com/160
+    public boolean Solution2(String[] phone_book) {
+        boolean answer = true;
+        int minPhoneSize = 999;
+
+        //데이터 용량 : 100만 , initialCapacity (= 버킷 수 != element 수)
+        //기본값 16, -> 데이터 용량 16만 => 버킷 하나당 element 1만개 비교
+        //버킷 확장 프로세스 호출시 (rehashing) 부하 큼. 버킷수 많으면 속도 빠름, 메모리 낭비 높음. 적으면 속도 느림 낭비 적음
+        //
+        Map<PhonebookKey, String> hashMap = new HashMap(1000000);
+
+        for(String phoneNumber : phone_book) {
+            if(phoneNumber.length() < minPhoneSize)
+                minPhoneSize = phoneNumber.length();
+        }
+
+        for(String phoneNumber :phone_book ) {
+            String prefix = phoneNumber.substring(0, minPhoneSize);
+            hashMap.put(new PhonebookKey(prefix), phoneNumber);
+        }
+
+        return answer;
+    }//Solution2 end
+
+    public class PhonebookKey {
+        private final String key;
+
+        public PhonebookKey (String key) { this.key = key; }
+
+        @Override
+        public final boolean equals(Object o) {
+            if(o == null) { return false; }
+            if(o == this) { return true; }
+            if(this.getClass() != o.getClass()) {return false; }
+
+            final PhonebookKey check = (PhonebookKey) o;
+
+            if( key == null ) {
+                if (check.key == null) {
+                    return false;
+                }
+            } else if (!key.equals(check.key)) {
+                    return false;
+            }
+
+            return true;
+        }
+
+
+        @Override
+        public int hashCode() {
+            final int PRIME = 31;
+            int result = 1;
+            result = PRIME * result + ((key == null) ? 0 : key.hashCode());
+            return result;
+        }
+    }
+
+    public boolean Solution3(String[] phone_book) {
+        boolean answer = true;
+        LinkedList linkedList = new LinkedList();
+        HashMap<LinkedList, String> hashMap = new HashMap();
+
+        //hashmap.put(new LinkedList(?, ?), element);
+        //if( key 존재) add LinkedList
+
+        return answer;
+    }  //Solution3 end
+
 }
