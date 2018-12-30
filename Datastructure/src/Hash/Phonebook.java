@@ -103,13 +103,15 @@ public class Phonebook {
     //https://stackoverflow.com/questions/26287852/java-hashtable-stores-multiple-items-with-same-hash-in-one-bucket
 
     //덮어 씌워지는 것처럼 보이는 이유는 equals,와 hashcode 재정의 하지 않아서.
-    //
+    //equals는 재정의 하지 않고 hashcode만 재정의 한 결과
+    //key값이 같은 여러 다른 value들이 저장되어 리스트형태로 연결된 상태가 되었다.
 
 
 
 
-    //http://iilii.egloos.com/4000476
-    //http://anster.tistory.com/160
+
+
+
     public boolean Solution2(String[] phone_book) {
         boolean answer = true;
         int minPhoneSize = 999;
@@ -117,7 +119,7 @@ public class Phonebook {
         //데이터 용량 : 100만 , initialCapacity (= 버킷 수 != element 수)
         //기본값 16, -> 데이터 용량 16만 => 버킷 하나당 element 1만개 비교
         //버킷 확장 프로세스 호출시 (rehashing) 부하 큼. 버킷수 많으면 속도 빠름, 메모리 낭비 높음. 적으면 속도 느림 낭비 적음
-        //
+        //loadFactor는 0.75가 기본값
         Map<PhonebookKey, String> hashMap = new HashMap(1000000);
 
         for(String phoneNumber : phone_book) {
@@ -129,6 +131,10 @@ public class Phonebook {
             String prefix = phoneNumber.substring(0, minPhoneSize);
             hashMap.put(new PhonebookKey(prefix), phoneNumber);
         }
+        for(PhonebookKey key : hashMap.keySet()) {
+            System.out.println(hashMap.get(key));
+        }
+
 
         return answer;
     }//Solution2 end
@@ -136,8 +142,14 @@ public class Phonebook {
     public class PhonebookKey {
         private final String key;
 
-        public PhonebookKey (String key) { this.key = key; }
 
+        public PhonebookKey (String key) {
+            this.key = key;
+
+        }
+
+        /*
+        사용하지 않으니 원하는 결과가 나옴.
         @Override
         public final boolean equals(Object o) {
             if(o == null) { return false; }
@@ -155,10 +167,8 @@ public class Phonebook {
             }
 
             return true;
-        }
+        }*/
 
-
-        @Override
         public int hashCode() {
             final int PRIME = 31;
             int result = 1;
@@ -167,10 +177,27 @@ public class Phonebook {
         }
     }
 
+    //HashMap<String, ArrayList> 형태로 구현
+
     public boolean Solution3(String[] phone_book) {
         boolean answer = true;
         LinkedList linkedList = new LinkedList();
-        HashMap<LinkedList, String> hashMap = new HashMap();
+        HashMap<String, ArrayList<String>> hashMap = new HashMap(1000000);
+        int minPhoneSize = 999;
+        for(String phoneNumber : phone_book) {
+            if(phoneNumber.length() < minPhoneSize)
+                minPhoneSize = phoneNumber.length();
+        }
+        for(String phoneNumber : phone_book) {
+            String prefix = phoneNumber.substring(0, minPhoneSize);
+            if(hashMap.containsKey(prefix)) {
+
+            } else {
+                hashMap.put(prefix, new ArrayList<>());
+            }
+
+        }
+
 
         //hashmap.put(new LinkedList(?, ?), element);
         //if( key 존재) add LinkedList
