@@ -61,12 +61,15 @@ public class main {
         String[] testcase1 ={"119", "97674", "11955", "119", "11911", "11922"};      //Expected Value : false
         String[] testcase2 ={"123", "456", "789"};                  //Expected Value : true
         String[] testcase3 ={"12", "123", "1235", "567", "88"};     //Expected Value : false
-        phoneAnswer = phonebook.Solution2(testcase1);
+        String[] testcase4 = {"113", "12340", "123440", "12345", "98346"};
+        phoneAnswer = phonebook.Solution3(testcase1);
         System.out.println("Expected value : false , Phonebook result1 : " + phoneAnswer);
-        phoneAnswer = phonebook.Solution2(testcase2);
-        System.out.println("Expected value : true , Phonebook result1 : " + phoneAnswer);
-        phoneAnswer = phonebook.Solution2(testcase3);
-        System.out.println("Expected value : false , Phonebook result1 : " + phoneAnswer);
+        phoneAnswer = phonebook.Solution3(testcase2);
+        System.out.println("Expected value : true , Phonebook result2 : " + phoneAnswer);
+        phoneAnswer = phonebook.Solution3(testcase3);
+        System.out.println("Expected value : false , Phonebook result3 : " + phoneAnswer);
+        phoneAnswer = phonebook.Solution3(testcase4);
+        System.out.println("Expected value : true , Phonebook result4 : " + phoneAnswer);
 
     }
 }
