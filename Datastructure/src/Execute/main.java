@@ -1,5 +1,6 @@
 package Execute;
 
+import Hash.Camouflage;
 import Hash.Marathon;
 import Hash.Phonebook;
 import Stack.Ironbar;
@@ -8,16 +9,16 @@ import Queue.Printer;
 
 public class main {
     public static void main(String[] args) {
+/*
         int answer;
         System.out.println("=========================  Ironbar  =============================");
         Ironbar ironbar = new Ironbar();
 
-        //ironbar input : "(((()())(())()))(())" Expected value: 17 , "(((()())(())()))" Expected value : 15
-        answer = ironbar.Solution("(((()())(())()))(())");
+        answer = ironbar.Solution("(((()())(())()))(())"); // Expected value: 17
         System.out.println("Expected value : 17 , Ironbar result1 : " + answer);
-        answer = ironbar.Solution2("(((()())(())()))");
+        answer = ironbar.Solution2("(((()())(())()))"); // Expected value : 15
         System.out.println("Expected value : 15 , Ironbar result2 : " + answer);
-/*
+
         System.out.println("==========================  Printer  =============================");
         Printer printer = new Printer();
         int[] testCase = {2, 1, 3, 2};
@@ -36,7 +37,7 @@ public class main {
         //[3, 1, 9, 1, 2, 1] , 1  -> Expected value : 5
         answer = printer.Solution6(testCase4, 1);
         System.out.println("Expected value : 5 , Printer result4 : " + answer);
-*/
+
         System.out.println("===========================  Marathon  ==========================");
         Marathon marathon = new Marathon();
         String result;
@@ -70,6 +71,20 @@ public class main {
         System.out.println("Expected value : false , Phonebook result3 : " + phoneAnswer);
         phoneAnswer = phonebook.Solution3(testcase4);
         System.out.println("Expected value : true , Phonebook result4 : " + phoneAnswer);
+*/
+        System.out.println("===========================  Camouflage  ==========================");
+        int camouflageAnswer = 0;
+        Camouflage camouflage = new Camouflage();
+        String [][] camouflageTestcase1 = { {"yellow_hat",      "headgear"},
+                                            {"blue_sunglasses", "eyewear"},
+                                            {"green_turban",    "headgear"} }; //Expected value : 5
+        String [][] camouflageTestcase2 = { {"crow_mask",       "face"},
+                                            {"blue_sunglasses", "face"},
+                                            {"smoky_makeup",    "face"} }; //Expected value : 3
+        camouflageAnswer = camouflage.solution(camouflageTestcase1);
+        System.out.println("Expected value : 5 , Camouflage result1 : " + camouflageAnswer);
+        camouflageAnswer = camouflage.solution(camouflageTestcase2);
+        System.out.println("Expected value : 5 , Camouflage result2 : " + camouflageAnswer);
 
     }
 }
