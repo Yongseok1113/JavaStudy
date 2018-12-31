@@ -23,11 +23,14 @@ key, value에 무엇을 저장할 것인지?
 key에 원본값? => 접두어인지 확인하는게 목적, 값을 서로 비교해야함,특정 값을 빠르게 찾는 것이 아님.
 최소 1, 첫번째 값으로 0~9까지 key로?
 String 해시는 문자 순서도 구별됨.
+
 * 문자열 포함여부 검색 : contains, IndexOf
 contains(CharSequence s) : 문자순서 s가 포함되있을 경우 true 리턴 -> 접두어인지 아닌지 따로 확인해야함.
 IndexOf(String str) : str과 같은 문자열이 포함되있는 경우에 첫번째로 발생한 색인을 반환함.
+
 * 문자열 부분자르기 : substring
 substring(int beginIndex, int endIndex) : 해당 인덱스에 포함된 문자열을 반환
+
 앞부분이 비슷한 번호들끼리 묶어서 저장해둔다.
 원본 값은 해시에 반드시 저장되어야 한다. (비교하기 위해서)
 다른값을 맨앞에서 부터 시작하여 완전히 포함하는 값이 있는지 확인하는 문제
@@ -75,6 +78,7 @@ public class Phonebook {
     해시 저장 과정과 검색 과정이 동시에 처리되선 안됨.
     정렬은 고려할만함. 각 char의 ASCII값의 조합이니 길이가짧고 접두가 같아지는 순으로 정렬될 것임.
     데이터 전체탐색은 정렬 2중for문 패턴탐색보다 효율적이기 힘들다.
+
     데이터 전체 탐색은 해시를 만드는 의미가 없어짐
     이 문제를 해시로 풀려면, 서로 접두어가 될수 있는 가능성이 있는 것들을 모아놓고 그 부분만 탐색할 수 있어야 한다.
     해시맵 버킷이 서로 연관된 여러 value를 보는 기능을 제공하기 위해서는 키 중복을 허용해야 한다.
@@ -83,6 +87,7 @@ public class Phonebook {
     ->구현되어있음.
     java에서 해시맵은 덮어씌우는 것이 아니었음. chainning 방식으로 해시 충돌 허용하고있음. 8개미안 - LinkedList, 8개 이상 - tree
     PhonebookKey 이너클래스, Solution2 참고
+
     키 중복 없이 구현하는 시나리오
     1버킷 1정보, 버킷간 관련성을 찾기 위해서는 value 중복 할 수 밖에 없음.
     원본 값중 최소길이까지 잘라 value에 보관한다면 키는 원본 값이 되어야 함.
@@ -90,6 +95,7 @@ public class Phonebook {
     이 방법도 결국 이중반복으로 하나하나 모두 찾아야 한다.
     해시 전체를 확인하지 않기 위해서는 관련 키별로 리스트를 짜는 수 밖에 없음.
     -> HashMap<String, ArrayList<String>> 이용하여 해결함. Solution3참고
+
     데이터 용량(=initialCapacity) : 100만
     버킷 수 기본값 16, -> 데이터 용량 16만 => 버킷 하나당 데이터 1만개 저장, 비교
     버킷 확장 프로세스 호출시 (rehashing) 부하 큼.
@@ -103,6 +109,7 @@ public class Phonebook {
     지나치게 크게 잡을 경우 다음과 같은 문제가 생길 수 있습니다.
     첫째, 메모리 낭비가 발생합니다. 둘째, key에 대한 iteration을 돌 때 부하가 커집니다.
     iteration의 부하는 (bucket의 수 + 실제 인스턴스의 크기) 에 비례합니다.
+
     출처 : http://iilii.egloos.com/4457500
     */
     //equals는 재정의 하지 않고 hashcode만 재정의 한 결과
@@ -139,7 +146,9 @@ public class Phonebook {
             if(o == null) { return false; }
             if(o == this) { return true; }
             if(this.getClass() != o.getClass()) {return false; }
+
             final PhonebookKey check = (PhonebookKey) o;
+
             if( key == null ) {
                 if (check.key == null) {
                     return false;
