@@ -9,7 +9,7 @@ import Queue.Printer;
 
 public class main {
     public static void main(String[] args) {
-
+/*
         int answer;
         System.out.println("=========================  Ironbar  =============================");
         Ironbar ironbar = new Ironbar();
@@ -71,7 +71,7 @@ public class main {
         System.out.println("Expected value : false , Phonebook result3 : " + phoneAnswer);
         phoneAnswer = phonebook.Solution3(testcase4);
         System.out.println("Expected value : true , Phonebook result4 : " + phoneAnswer);
-
+*/
         System.out.println("===========================  Camouflage  ==========================");
         int camouflageAnswer = 0;
         Camouflage camouflage = new Camouflage();
@@ -84,7 +84,7 @@ public class main {
         camouflageAnswer = camouflage.solution(camouflageTestcase1);
         System.out.println("Expected value : 5 , Camouflage result1 : " + camouflageAnswer);
         camouflageAnswer = camouflage.solution(camouflageTestcase2);
-        System.out.println("Expected value : 5 , Camouflage result2 : " + camouflageAnswer);
+        System.out.println("Expected value : 3 , Camouflage result2 : " + camouflageAnswer);
 
     }
 }
