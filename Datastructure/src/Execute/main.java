@@ -84,7 +84,7 @@ public class main {
         camouflageAnswer = camouflage.solution(camouflageTestcase1);
         System.out.println("Expected value : 5 , Camouflage result1 : " + camouflageAnswer);
         camouflageAnswer = camouflage.solution(camouflageTestcase2);
-        System.out.println("Expected value : 5 , Camouflage result2 : " + camouflageAnswer);
+        System.out.println("Expected value : 3 , Camouflage result2 : " + camouflageAnswer);
 
     }
 }
