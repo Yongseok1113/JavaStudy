@@ -52,7 +52,7 @@ public class Camouflage {
             if(!hashMap_closets.containsKey(clothes[i][1])) {
                 hashMap_closets.put(clothes[i][1], new ArrayList<>());
             }
-            hashMap_closets.get(clothes[i][1]).add(clothes[0][i]);
+            hashMap_closets.get(clothes[i][1]).add(clothes[i][0]);
         }
 
         //wardrobe list
