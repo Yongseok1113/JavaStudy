@@ -12,6 +12,8 @@
 
 package Math;
 
+import java.util.ArrayList;
+
 public class Combination {
 
     public int run(int n, int r) {
@@ -24,21 +26,43 @@ public class Combination {
         else return run(n-1, r-1) + run(n-1, r);
     }
 
-    //중복없이 순서에 상관없이 각기 다른 주머니를 뽑고 주머니 안에 각각 다른 구슬을 뽑는 모든 경우의 수
-    //list 색인 하나는 주머니 하나를 의미 원소는 구슬이 들어있는 수
-    //
-    //n = list.length, r = 뽑을 경우의 수
-    public int marbleInPoket(int[] array, int[]list, int n, int r, int result) {
-        if(n < r) return 0;
-        if(r == 0 ) {
-            return 1;
+    /*
+    *   각 옷장별로 같은 종류의 다른 옷들이 보관되어 있는 상태에서 최소한 하나의 옷은 입는 모든 경우의 수 (종류와 이름이 모두 같은 옷은 없음)
+    *   @selectedCloset      : 옷장을 선택할 때 임시로 보관되는 곳
+    *   @closetList          : 모든 옷장정보가 보관된 곳, 색인 하나 = 옷장 하나 , 색인별로 저장된 값 = 옷장에 보관된 옷의 수
+    *   @n                   : 옷장의 총 개수
+    *   @r                   : 옷장을 선택할 개수
+    *   @closetListIndex     : closetList의 색인( 현재 주목하고 있는 옷장, 선택할지 말지 결정해야 할 옷장)
+    *   @selectedClosetIndex : selectedCloset의 색인 (선택된 옷장을 임시로 보관할 색인)
+    *
+    * */
+    public int sumOfCombination(int[] selectedCloset, ArrayList closetList, int n, int r, int closetListIndex, int selectedClosetIndex) {
+        //옷장의 선택이 끝났다면, 현재까지 선택된 옷장에서 옷을 하나씩 고르는 경우의 수 반환
+        if(r == 0) {
+            int result = 1;
+            for(int i=0; i<selectedClosetIndex; i++) {
+                result *= selectedCloset[i];
+            }
+            return result;
         }
+        //모든 옷장을 선택하는 경우, 모든 옷장에서 하나씩 고르는 경우의 수 반환
         else if(r == n) {
-            for()
+            int result = 1;
+            for(int i=0; i<r; i++) {
+                result *= (int)closetList.get(i);
+            }
+            return result;
         }
+        //마지막 선택이 완료된 시점에서 마지막 선택을 하지 않았다고 가정된 경우 접근됨
+        //모든 옷장을 선택하는 경우(r==n)가 처리되고 있기 때문에 마지막 옷장이 주목되어선 안됨. 0반환
+        else if(closetListIndex == n) return 0;
         else {
-            //return marbleInPoket(list, n-1,r-1, result);
+            selectedCloset[selectedClosetIndex] = (int)closetList.get(closetListIndex);
+            return
+                    //현재 주목하는 옷장을 선택한 경우
+                    sumOfCombination(selectedCloset, closetList, n, r-1, closetListIndex + 1, selectedClosetIndex + 1) +
+                            //선택 하지 않은 경우
+                            sumOfCombination(selectedCloset, closetList, n, r, closetListIndex + 1, selectedClosetIndex);
         }
-
     }
 }

@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5d55808c-8237-444a-941f-4f416f69bb8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Datastructure/Execute/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Datastructure/Execute/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Datastructure/Hash/Camouflage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Datastructure/Hash/Camouflage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Execute/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Datastructure/Math/Combination.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Datastructure/Math/Combination.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hash/Camouflage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hash/Camouflage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Math/Combination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Math/Combination.java" afterDir="false" />
     </list>
@@ -42,21 +41,21 @@
     <session id="-80336464">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.22" value="4" />
+          <entry key="project.open.time.22" value="5" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.25" value="2" />
+          <entry key="project.open.time.25" value="3" />
           <entry key="project.open.time.27" value="2" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -80,7 +79,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="24341" />
+          <entry key="JAVA" value="27375" />
         </counts>
       </usages-collector>
     </session>
@@ -90,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Execute/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="123">
+              <caret line="89" column="45" selection-start-line="89" selection-start-column="45" selection-end-line="89" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Hash/Camouflage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="761">
-              <caret line="103" column="44" lean-forward="true" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
+            <state relative-caret-position="142">
+              <caret line="88" column="52" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
               <folding>
                 <element signature="e#0#3227#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -112,14 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Math/Combination.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#817#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-380">
+              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -201,9 +197,9 @@
         <option value="$PROJECT_DIR$/src/Hash/Marathon.java" />
         <option value="$PROJECT_DIR$/src/Hash/Phonebook.java" />
         <option value="$PROJECT_DIR$/src/Math/Permutation.java" />
-        <option value="$PROJECT_DIR$/src/Hash/Camouflage.java" />
         <option value="$PROJECT_DIR$/src/Execute/main.java" />
         <option value="$PROJECT_DIR$/src/Math/Combination.java" />
+        <option value="$PROJECT_DIR$/src/Hash/Camouflage.java" />
       </list>
     </option>
   </component>
@@ -232,6 +228,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,6 +251,12 @@
               <item name="Datastructure" type="b2602c69:ProjectViewProjectNode" />
               <item name="Datastructure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Hash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Datastructure" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Datastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Math" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -261,8 +264,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,17 +329,20 @@
       <workItem from="1546316490921" duration="16053000" />
       <workItem from="1546344763421" duration="185000" />
       <workItem from="1546412241774" duration="7405000" />
+      <workItem from="1546655289556" duration="68000" />
+      <workItem from="1546655537126" duration="15204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141039000" />
+    <option name="totallyTimeSpent" value="156311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1234" height="736" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7004992" visible="true" weight="0.20698467" />
-      <window_info id="Structure" order="1" sideWeight="0.29950082" side_tool="true" visible="true" weight="0.20698467" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.69285715" visible="true" weight="0.21379898" />
+      <window_info id="Structure" order="1" sideWeight="0.30714285" side_tool="true" visible="true" weight="0.21379898" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -346,8 +350,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3793677" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5024958" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30116472" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.16306156" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -433,12 +437,6 @@
           <url>file://$PROJECT_DIR$/src/Hash/Camouflage.java</url>
           <properties />
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Execute/main.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -545,6 +543,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hash/Phonebook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2679">
+          <caret line="158" column="12" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Execute/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="89" column="45" selection-start-line="89" selection-start-column="45" selection-end-line="89" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Hash/Marathon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -555,40 +570,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hash/Phonebook.java">
+    <entry file="file://$PROJECT_DIR$/src/Math/Combination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2679">
-          <caret line="158" column="12" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+        <state relative-caret-position="-380">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Hash/Camouflage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="103" column="44" lean-forward="true" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
+        <state relative-caret-position="142">
+          <caret line="88" column="52" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
           <folding>
             <element signature="e#0#3227#0" expanded="true" />
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Execute/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Math/Combination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#817#0" expanded="true" />
           </folding>
         </state>
       </provider>
