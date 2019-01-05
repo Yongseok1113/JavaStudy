@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d55808c-8237-444a-941f-4f416f69bb8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Datastructure/Hash/Camouflage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Datastructure/Hash/Camouflage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Datastructure/Math/Combination.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Datastructure/Math/Combination.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hash/Camouflage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hash/Camouflage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Math/Combination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Math/Combination.java" afterDir="false" />
-    </list>
+    <list default="true" id="5d55808c-8237-444a-941f-4f416f69bb8c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +35,7 @@
     <session id="-80336464">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="3" />
@@ -101,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Hash/Camouflage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="88" column="52" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
+            <state relative-caret-position="1149">
+              <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
               <folding>
                 <element signature="e#0#3227#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -330,19 +324,18 @@
       <workItem from="1546344763421" duration="185000" />
       <workItem from="1546412241774" duration="7405000" />
       <workItem from="1546655289556" duration="68000" />
-      <workItem from="1546655537126" duration="15724000" />
+      <workItem from="1546655537126" duration="15855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156831000" />
+    <option name="totallyTimeSpent" value="156962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1234" height="736" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.69285715" visible="true" weight="0.21379898" />
-      <window_info id="Structure" order="1" sideWeight="0.30714285" side_tool="true" visible="true" weight="0.21379898" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6938436" visible="true" weight="0.21379898" />
+      <window_info id="Structure" order="1" sideWeight="0.3061564" side_tool="true" visible="true" weight="0.21379898" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -350,7 +343,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30116472" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30116472" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.16306156" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -579,8 +572,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Hash/Camouflage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="88" column="52" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
+        <state relative-caret-position="1149">
+          <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
           <folding>
             <element signature="e#0#3227#0" expanded="true" />
             <element signature="imports" expanded="true" />
