@@ -29,6 +29,7 @@
 package Hash;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 public class Camouflage {
@@ -43,6 +44,8 @@ public class Camouflage {
     *   직접 모두 접근 => nCr에서 재귀호출에서 주목하고있는 옷장이 선택되거나(r-1) 선택되지 않을 경우(r)를 합한 값
     *   Combination 재귀호출 없이 while구현할 수 없는 것 같다.
     *   트리구조가 필요함.
+    *
+    *   최악의 경우를 따로 처리해주면서 100점.
     * */
     public int solution(String[][] clothes) {
         int answer = 0;
@@ -63,12 +66,25 @@ public class Camouflage {
             closetList.add(closet.size());
         }
 
+        //해쉬맵에서 최악의 경우는 각 버킷에 한개만 들어가는 경우.
+
+        if(closetList.size() == clothes.length) {
+            for(int i = 1; i < closetList.size(); i++) {
+                answer += combination(closetList.size(), i);
+            }
+            return answer + 1; //모든 옷장을 고르는 경우 + 1
+        }
+
+
         //모든 경우의 수 = nC1 + nC2 + ... +nCn
         int [] arrayForCombination = new int [closetList.size()];
         for(int i=1; i<=closetList.size(); i++) {
             answer += Combination(arrayForCombination, closetList ,closetList.size(), i, 0, 0);
         }
         return answer;
+    }
+    public int combination(int n, int r) {
+        if(n == r || r == 0) return 1; else return combination(n - 1, r - 1) + combination(n - 1, r);
     }
     public int Combination(int[] selectedCloset, ArrayList closetList, int n, int r, int closetListIndex, int selectedClosetIndex) {
 
@@ -125,6 +141,31 @@ public class Camouflage {
         }
         answer = answer - 1;
         return answer;
+    }
+
+    public int solution3(String[][] clothes) {
+        var map = new HashMap<String, Integer>();
+        for (String[] strings : clothes) {
+            int p = 0;
+            String key = strings[1];
+            if(map.containsKey(key)){
+                p = map.get(key);
+            }
+            map.put(key, p+1);
+        }
+        Collection<Integer> values = map.values();
+        Integer[] counts = new Integer[values.size()];
+        values.toArray(counts);
+
+        int[][] dp = new int[values.size()][2];
+        dp[0][0] = 1;
+        dp[0][1] = counts[0];
+        for (int i = 1; i < dp.length; i++) {
+            dp[i][0] = dp[i-1][0] + dp[i-1][1];
+            dp[i][1] = dp[i-1][0] * counts[i] + dp[i-1][1] * counts[i];
+        }
+
+        return dp[dp.length-1][0] + dp[dp.length-1][1] -1;
     }
 
 }

@@ -82,10 +82,18 @@ public class main {
         String [][] camouflageTestcase2 = { {"crow_mask",       "face"},
                                             {"blue_sunglasses", "face"},
                                             {"smoky_makeup",    "face"} };      //Expected value : 3
+        String [][] camouflageTestcase3 = { {"yellow_hat",      "headgear"},
+                                            {"blue_sunglasses", "eyewear"},
+                                            {"green_turban",    "headgear"},
+                                            {"yellow_shirt", "shirts"},
+                                            {"blue_shirt", "shirts"},
+                                            {"green_shirt", "shirts"} };          //Expected value : 23
         camouflageAnswer = camouflage.solution(camouflageTestcase1);
         System.out.println("Expected value : 5 , Camouflage result1 : " + camouflageAnswer);
         camouflageAnswer = camouflage.solution(camouflageTestcase2);
         System.out.println("Expected value : 3 , Camouflage result2 : " + camouflageAnswer);
+        camouflageAnswer = camouflage.solution(camouflageTestcase3);
+        System.out.println("Expected value : 23 , Camouflage result3 : " + camouflageAnswer);
 
         System.out.println("===========================  Math  ==========================");
         Combination combination = new Combination();
