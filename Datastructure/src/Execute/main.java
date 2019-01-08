@@ -1,5 +1,6 @@
 package Execute;
 
+import Heap.MoreSpicy;
 import Math.Combination;
 import Hash.Camouflage;
 import Hash.Marathon;
@@ -72,7 +73,7 @@ public class main {
         System.out.println("Expected value : false , Phonebook result3 : " + phoneAnswer);
         phoneAnswer = phonebook.Solution3(testcase4);
         System.out.println("Expected value : true , Phonebook result4 : " + phoneAnswer);
-*/
+
         System.out.println("===========================  Camouflage  ==========================");
         int camouflageAnswer = 0;
         Camouflage camouflage = new Camouflage();
@@ -100,5 +101,17 @@ public class main {
         int result = 1;
         result = combination.run(10, 3);
         System.out.println(result);
+*/
+        System.out.println("===========================  Heap  ==========================");
+        MoreSpicy moreSpicy = new MoreSpicy();
+        int answer = 0;
+        int[] testcase1 = {1, 2, 6, 9, 10, 12};  int k = 7;    //Expected value : 2
+        int[] testcase2 = {21, 22, 23, 35, 1, 1, 13, 13, 14, 14};  int k2 = 20;    //Expected value : 2
+        answer = moreSpicy.solution(testcase1, k);
+        System.out.println("Expected value : 2 , moreSpicy result1 : " + answer);
+        answer = moreSpicy.solution(testcase2, k2);
+        System.out.println("Expected value : 2 , moreSpicy result2 : " + answer);
+
+
     }
 }
