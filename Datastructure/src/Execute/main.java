@@ -106,11 +106,8 @@ public class main {
         MoreSpicy moreSpicy = new MoreSpicy();
         int answer = 0;
         int[] testcase1 = {1, 2, 6, 9, 10, 12};  int k = 7;    //Expected value : 2
-        int[] testcase2 = {21, 22, 23, 35, 1, 1, 13, 13, 14, 14};  int k2 = 20;    //Expected value : 2
         answer = moreSpicy.solution(testcase1, k);
         System.out.println("Expected value : 2 , moreSpicy result1 : " + answer);
-        answer = moreSpicy.solution(testcase2, k2);
-        System.out.println("Expected value : 2 , moreSpicy result2 : " + answer);
 
 
     }

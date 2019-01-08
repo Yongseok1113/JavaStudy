@@ -27,6 +27,8 @@
 *   가진 음식의 스코빌 지수 = [13, 9, 10, 12]
 *
 *   모든 음식의 스코빌 지수가 7 이상이 되었고 이때 섞은 횟수는 2회입니다.
+*
+*
 * */
 
 package Heap;
@@ -35,41 +37,86 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class MoreSpicy {
+
+    //90.5점
     public int solution(int[] scoville, int K) {
         int answer = 0;
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
-
+        boolean flag = false;
         Arrays.sort(scoville);
-        if(scoville[0] > K) return 0;
+
         for(int element : scoville) {
             if(element < K)
                 priorityQueue.add(element);
-            else
+            else {
+                flag = true;
                 break;
+            }
         }
-        //0이거나, -1이거나, 섞은횟수거나
-        //0 : 전부 타겟지수 이상
-        //-1 : 전부 타겟지수 이상으로 조합 불가
-        //섞은횟수 :전부 타겟지수 이상으로 조합 가능
-        //적은 지수 갯수 1개
-        //적은 지수 갯수 2개
-        //적은 지수 갯수
+        while(priorityQueue.size() > 1) {
+            int target1 = priorityQueue.remove();
+            int target2 = priorityQueue.remove();
+            int mixedTarget = target1 + target2 * 2;
+
+            if(mixedTarget > K) {
+                flag = true;
+            }
+            else if(!priorityQueue.isEmpty())
+                priorityQueue.add(mixedTarget);
+            answer++;
+        }
+        if(!priorityQueue.isEmpty() && !flag)
+            return -1;
+        return answer;
+    }
+
+    //100점
+    //조건문 낭비 매우 심함.
+    public int solution2(int[] scoville, int K) {
+        int answer = 0;
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        boolean flag = false;
+        Arrays.sort(scoville);
+
+        for(int element : scoville) {
+            if(element < K)
+                priorityQueue.add(element);
+            else {
+                priorityQueue.add(element);
+                break;
+            }
+        }
+
+        if(priorityQueue.size() == 1) {
+            return 0;
+        }
 
         while(priorityQueue.size() > 1) {
             int target1 = priorityQueue.remove();
             int target2 = priorityQueue.remove();
 
-            if( (target1 + (target2 * 2) < K)) {
-                priorityQueue.add(target1 + (target2 * 2));
+            if(priorityQueue.size() == 0) {
+                if( target1 + (target2 * 2) < K) {
+                    if(!flag)
+                        return -1;
+                }
+                else {
+                    answer++;
+                    return answer;
+                }
             }
-           /* else if(priorityQueue.size() == 1)
-                priorityQueue.add(target1 + (target2 * 2)); 이걸 추가하면 다른게 틀리는 대신 이전에 틀리던
-                케이스 6, 7, 10, 13 이 모두 맞음. -> 3개남았을 때 두개를 검사한게 넘을 경우, 마지막하나 검사가 안되는 상태였음
-                아무래도 무조건 추가는 되면서 비교가 되어야 하는 것 같다.*/
-                answer++;
-        }
-        if(priorityQueue.size() == 1 ) {
-            return -1;
+            else if(target1 + (target2 * 2) < K)
+                priorityQueue.add(target1 + (target2 *2));
+            else if(priorityQueue.size() == 1){
+                if(priorityQueue.element() > K) {
+                    return answer + 1;
+                }
+                else
+                    return answer + 2;
+            }
+            else
+                flag = true;
+            answer++;
         }
         return answer;
     }
