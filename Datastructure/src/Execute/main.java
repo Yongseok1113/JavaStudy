@@ -1,5 +1,6 @@
 package Execute;
 
+import Heap.DualPriorityQueue;
 import Heap.MoreSpicy;
 import Math.Combination;
 import Hash.Camouflage;
@@ -101,14 +102,27 @@ public class main {
         int result = 1;
         result = combination.run(10, 3);
         System.out.println(result);
-*/
-        System.out.println("===========================  Heap  ==========================");
+
+        System.out.println("===========================  MoreSpicy  ==========================");
         MoreSpicy moreSpicy = new MoreSpicy();
         int answer = 0;
         int[] testcase1 = {1, 2, 6, 9, 10, 12};  int k = 7;    //Expected value : 2
+        int[] testcase2 = {1, 1, 1};  int k2 = 20;    //Expected value : -1
         answer = moreSpicy.solution(testcase1, k);
         System.out.println("Expected value : 2 , moreSpicy result1 : " + answer);
-
-
+        answer = moreSpicy.solution(testcase2, k2);
+        System.out.println("Expected value : -1 , moreSpicy result2 : " + answer);
+*/
+        System.out.println("=====================  DualPriorityQueue  ===================");
+        DualPriorityQueue dualPriorityQueue = new DualPriorityQueue();
+        //Expected value : [0,0]
+        String[] DualPriorityQueue_testcase1 = {"I -45", "I 653", "D 1", "I -642", "I 45", "I 97", "D 1", "D -1", "I 333"};
+        dualPriorityQueue.solution(DualPriorityQueue_testcase1);
+        //Expected value : [333, -45]
+        String[] DualPriorityQueue_testcase2 = {"I 16", "I -5643", "D -1", "D 1", "D 1", "I 123", "D -1"};
+        dualPriorityQueue.solution((DualPriorityQueue_testcase2));
+        //Expected value : [-9999, -9999]
+        String[] DualPriorityQueue_testcase3 = {"I 16", "I -5643", "D -1", "I 123", "I -9999", "D 1", "D 1"};
+        dualPriorityQueue.solution((DualPriorityQueue_testcase3));
     }
 }

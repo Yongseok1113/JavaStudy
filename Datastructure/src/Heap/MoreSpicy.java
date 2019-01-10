@@ -38,37 +38,48 @@ import java.util.PriorityQueue;
 
 public class MoreSpicy {
 
-    //90.5점
+    /*
+    *   100점.
+    *   타겟지수보다 작은 것만 새로 추가할 때
+    *   큐가 비어있지 않은 경우 남아있는 값은 무조건 타겟지수보다 작은 값.
+    *   타겟지수보다 크거나 같은 경우가 발생했었다면(flag = true) 한번 더 조합한 값이 최소 조합 값
+    *   발생하지 않았다면(flag = false) 조합 불가
+    *
+    * */
     public int solution(int[] scoville, int K) {
         int answer = 0;
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
         boolean flag = false;
         Arrays.sort(scoville);
 
-        for(int element : scoville) {
-            if(element < K)
+        for (int element : scoville) {
+            if (element < K)
                 priorityQueue.add(element);
             else {
                 flag = true;
                 break;
             }
         }
-        while(priorityQueue.size() > 1) {
+        while (priorityQueue.size() > 1) {
             int target1 = priorityQueue.remove();
             int target2 = priorityQueue.remove();
             int mixedTarget = target1 + target2 * 2;
 
-            if(mixedTarget > K) {
+            if (mixedTarget > K)
                 flag = true;
-            }
-            else if(!priorityQueue.isEmpty())
+            else
                 priorityQueue.add(mixedTarget);
             answer++;
         }
-        if(!priorityQueue.isEmpty() && !flag)
-            return -1;
+        if (!priorityQueue.isEmpty()) {
+            if(!flag)
+                return -1;
+            else
+                answer++;
+        }
         return answer;
     }
+
 
     //100점
     //조건문 낭비 매우 심함.
@@ -119,5 +130,37 @@ public class MoreSpicy {
             answer++;
         }
         return answer;
+    }
+    /*
+    *   다른사람의 풀이
+    *   느낀점
+    *   나는 큐에 K이하 값만 담으려 했고 그로인해 정렬을 한번 해야했다.
+    *   또한 여러 상황을 고려하게 되어 최적화에 시간이 많이 걸린 것 같다.
+    *   큐를 수정할 때 트리에 값이 많으면 효율이 떨어진다고 생각해서 이런 방식으로 풀려했는데 생각보다 부하가 차이나지 않는 것 같다.
+    *
+    *   모든 값을 넣고 우선순위 별로 하나씩 꺼내면서 특정조건을 찾는 방식이 우선순위큐를 사용하는 방식인 것 같다.
+    *   하지만 정렬된 값을 우선순위큐에 넣을 때 가장 효율적이다.
+    *
+    * */
+    public int solution3(int[] scoville, int K) {
+        PriorityQueue<Integer> q = new PriorityQueue<>();
+
+        for(int i = 0; i < scoville.length; i++)
+            q.add(scoville[i]);
+
+        int count = 0;
+        while(q.size() > 1 && q.peek() < K){
+            int weakHot = q.poll();
+            int secondWeakHot = q.poll();
+
+            int mixHot = weakHot + (secondWeakHot * 2);
+            q.add(mixHot);
+            count++;
+        }
+
+        if(q.size() <= 1 && q.peek() < K)
+            count = -1;
+
+        return count;
     }
 }
