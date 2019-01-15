@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d55808c-8237-444a-941f-4f416f69bb8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Datastructure/Heap/DualPriorityQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Datastructure/Heap/DualPriorityQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Execute/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Heap/DualPriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heap/DualPriorityQueue.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Execute/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="122" selection-start-line="122" selection-end-line="122" />
+            <state relative-caret-position="343">
+              <caret line="148" selection-start-line="148" selection-end-line="148" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,22 +30,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Heap/DualPriorityQueue.java">
+        <entry file="file://$PROJECT_DIR$/src/Sort/LargestNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="48" column="17" lean-forward="true" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            <state relative-caret-position="167">
+              <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#60#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/AbstractQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
             </state>
           </provider>
         </entry>
@@ -90,8 +80,10 @@
         <option value="$PROJECT_DIR$/src/Math/Combination.java" />
         <option value="$PROJECT_DIR$/src/Hash/Camouflage.java" />
         <option value="$PROJECT_DIR$/src/Heap/MoreSpicy.java" />
-        <option value="$PROJECT_DIR$/src/Execute/main.java" />
         <option value="$PROJECT_DIR$/src/Heap/DualPriorityQueue.java" />
+        <option value="$PROJECT_DIR$/src/Sort/KthNumber.java" />
+        <option value="$PROJECT_DIR$/src/Execute/main.java" />
+        <option value="$PROJECT_DIR$/src/Sort/LargestNumber.java" />
       </list>
     </option>
   </component>
@@ -132,12 +124,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Execute" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Datastructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Datastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Heap" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -150,7 +136,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/ysoh/Documents/GitHub/JavaStudy/Datastructure/src/Execute/main.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547114061198" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547544085989" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/javapractice3/javapractice3/src/ysoh/hashmapPractice.java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -216,19 +202,18 @@
       <workItem from="1546916333834" duration="726000" />
       <workItem from="1546919751022" duration="10142000" />
       <workItem from="1547097781394" duration="15995000" />
-      <workItem from="1547521604920" duration="2554000" />
+      <workItem from="1547521604920" duration="21655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210461000" />
+    <option name="totallyTimeSpent" value="229562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1234" height="736" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6840855" visible="true" weight="0.23594548" />
-      <window_info id="Structure" order="1" sideWeight="0.31591448" side_tool="true" visible="true" weight="0.23594548" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.68272424" visible="true" weight="0.23594548" />
+      <window_info id="Structure" order="1" sideWeight="0.31727573" side_tool="true" visible="true" weight="0.23594548" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -236,7 +221,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30066445" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30066445" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32724252" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -245,7 +230,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3294509" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32890365" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -337,12 +322,6 @@
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Execute/main.java</url>
-          <line>122</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -350,6 +329,9 @@
         <watch expression="args" />
         <watch expression="waitProcessList" language="JAVA" />
         <watch expression="this.value" language="JAVA" custom="java.util.HashMap.Node" />
+        <watch expression="answer[i]" language="JAVA" />
+        <watch expression="strNumbers[1]" />
+        <watch expression="answer[i]" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -520,22 +502,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Execute/main.java">
+    <entry file="file://$PROJECT_DIR$/src/Sort/KthNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        <state relative-caret-position="827">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Heap/DualPriorityQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="48" column="17" lean-forward="true" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        <state relative-caret-position="352">
+          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/AbstractStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="1099" selection-start-line="1099" selection-end-line="1099" />
+          <folding>
+            <element signature="e#60828#60829#0" expanded="true" />
+            <element signature="e#60882#60883#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/StringBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="519" selection-start-line="519" selection-end-line="519" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="3075" selection-start-line="3075" selection-end-line="3075" />
+          <folding>
+            <element signature="e#24503#24504#0" expanded="true" />
+            <element signature="e#24549#24550#0" expanded="true" />
+            <element signature="e#121412#121413#0" expanded="true" />
+            <element signature="e#121466#121467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Execute/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sort/LargestNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
           </folding>
         </state>
       </provider>

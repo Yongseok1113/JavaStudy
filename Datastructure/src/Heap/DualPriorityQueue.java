@@ -59,35 +59,5 @@ public class DualPriorityQueue {
         System.out.println(answer[0] + ", " + answer[1]);
     }
 
-    //83.3점
-    public int[] solution2(String[] operations) {
-        int[] answer = {0,0};
-        PriorityQueue<Integer> minPQ = new PriorityQueue<>(1000000);
-        PriorityQueue<Integer> maxPQ = new PriorityQueue<>(1000000, Collections.reverseOrder());
-
-        for(String element : operations) {
-            String[] command = element.split(" ");
-            if(command[0].equals("I")) {
-                minPQ.add(Integer.parseInt(command[1]));
-                maxPQ.add(Integer.parseInt(command[1]));
-            }
-            else if(command[0].equals("D") && !maxPQ.isEmpty() && !minPQ.isEmpty()) {
-                if(command[1].equals("1"))
-                    maxPQ.remove();
-                else if(command[1].equals("-1"))
-                    minPQ.remove();
-                if(maxPQ.isEmpty() || minPQ.isEmpty()) {
-                    minPQ.clear();
-                    maxPQ.clear();
-                }
-            }
-        }
-
-        if(!maxPQ.isEmpty() && !minPQ.isEmpty()) {
-            answer[0] = maxPQ.element();
-            answer[1] = minPQ.element();
-        }
-        return answer;
-    }
 
 }

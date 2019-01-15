@@ -6,6 +6,8 @@ import Math.Combination;
 import Hash.Camouflage;
 import Hash.Marathon;
 import Hash.Phonebook;
+import Sort.KthNumber;
+import Sort.LargestNumber;
 import Stack.Ironbar;
 
 import Queue.Printer;
@@ -112,7 +114,7 @@ public class main {
         System.out.println("Expected value : 2 , moreSpicy result1 : " + answer);
         answer = moreSpicy.solution(testcase2, k2);
         System.out.println("Expected value : -1 , moreSpicy result2 : " + answer);
-*/
+
         System.out.println("=====================  DualPriorityQueue  ===================");
         DualPriorityQueue dualPriorityQueue = new DualPriorityQueue();
         //Expected value : [0,0]
@@ -124,5 +126,28 @@ public class main {
         //Expected value : [-9999, -9999]
         String[] DualPriorityQueue_testcase3 = {"I 16", "I -5643", "D -1", "I 123", "I -9999", "D 1", "D 1"};
         dualPriorityQueue.solution((DualPriorityQueue_testcase3));
+
+        System.out.println("=========================  KthNumber  ======================");
+        KthNumber kthNumber = new KthNumber();
+        int[] kthNumResult;
+        //Expected value : [5, 6, 3]
+        int[] testcase1 = { 1, 5, 2, 6, 3, 7, 4};
+        int[][] commands1 = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
+        kthNumResult = kthNumber.solution(testcase1, commands1);
+        System.out.println("Expected value : [5, 6, 3], testcase1 result : " + kthNumResult);
+*/
+        System.out.println("=======================  LargestNumber  ====================");
+        LargestNumber largestNumber = new LargestNumber();
+        int[] testcase1 = {6, 10, 2};	        //Expected value : 6210
+        int[] testcase2 = {7, 3, 30, 34, 9, 91, 970, 972};	//Expected value : 997297091734330
+        int[] testcase3 = {12, 121};	//Expected value : 12121
+        StringBuffer largestNumberAnswer;
+        largestNumberAnswer = largestNumber.solution(testcase1);
+        System.out.println("Expected value : 6210, result : " + largestNumberAnswer);
+        largestNumberAnswer = largestNumber.solution(testcase2);
+        System.out.println("Expected value : 997297091734330, result : " + largestNumberAnswer);
+        largestNumberAnswer = largestNumber.solution(testcase3);
+        System.out.println("Expected value : 12121, result : " + largestNumberAnswer);
+
     }
 }
