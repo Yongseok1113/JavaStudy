@@ -28,29 +28,28 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class DualPriorityQueue {
+    //100점
     public void solution(String[] operations) {
         int[] answer = new int[2];
         PriorityQueue<Integer> minPQ = new PriorityQueue<>(1000000);
         PriorityQueue<Integer> maxPQ = new PriorityQueue<>(1000000, Collections.reverseOrder());
-        int syncValue = 0;
-        for(String element : operations) {
+
+        for (String element : operations) {
             String[] command = element.split(" ");
-            if(command[0].equals("I")) {
+            if (command[0].equals("I")) {
                 minPQ.add(Integer.parseInt(command[1]));
                 maxPQ.add(Integer.parseInt(command[1]));
-            }
-            else if(command[0].equals("D")) {
-                if(command[1].equals("1")) {
-                    maxPQ.remove();
-                    removeTail(minPQ);
-                }
-                else if(command[1].equals("-1")) {
-                    minPQ.remove();
-                    removeTail(maxPQ);
+            } else if (command[0].equals("D") && !minPQ.isEmpty() && !maxPQ.isEmpty()) {
+                if (command[1].equals("1")) {
+                    int removeTail = maxPQ.remove();
+                    minPQ.remove(removeTail);
+                } else if (command[1].equals("-1")) {
+                    int removeTail = minPQ.remove();
+                    maxPQ.remove(removeTail);
                 }
             }
         }
-        if(!maxPQ.isEmpty() && !minPQ.isEmpty()) {
+        if (!maxPQ.isEmpty() && !minPQ.isEmpty()) {
             int max = maxPQ.element();
             int min = minPQ.element();
             answer[0] = max;
@@ -58,14 +57,6 @@ public class DualPriorityQueue {
         }
 
         System.out.println(answer[0] + ", " + answer[1]);
-    }
-    public void removeTail(PriorityQueue<Integer> queue) {
-        Object [] array;
-        array = queue.toArray();
-        queue.clear();
-        for(int i=0; i<queue.size() -1; i++) {
-            queue.add((int)array[i]);
-        }
     }
 
     //83.3점
