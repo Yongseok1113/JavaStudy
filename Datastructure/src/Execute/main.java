@@ -138,16 +138,22 @@ public class main {
 */
         System.out.println("=======================  LargestNumber  ====================");
         LargestNumber largestNumber = new LargestNumber();
-        int[] testcase1 = {6, 10, 2};	        //Expected value : 6210
-        int[] testcase2 = {7, 3, 30, 34, 9, 91, 970, 972};	//Expected value : 997297091734330
-        int[] testcase3 = {12, 121};	//Expected value : 12121
+        int[] testcase1 = {6, 10, 2};	                     //Expected value : 6210
+        int[] testcase2 = {7, 3, 30, 34, 9, 91, 970, 972};	 //Expected value : 997297091734330
+        int[] testcase3 = {12, 121};	                     //Expected value : 12121
+        int[] testcase4 = {21, 212};	                     //Expected value : 21221
+        int[] testcase5 = {0, 0, 0, 0};	                     //Expected value : 0
         StringBuffer largestNumberAnswer;
-        largestNumberAnswer = largestNumber.solution(testcase1);
+        largestNumberAnswer = largestNumber.solution2(testcase1);
         System.out.println("Expected value : 6210, result : " + largestNumberAnswer);
-        largestNumberAnswer = largestNumber.solution(testcase2);
+        largestNumberAnswer = largestNumber.solution2(testcase2);
         System.out.println("Expected value : 997297091734330, result : " + largestNumberAnswer);
-        largestNumberAnswer = largestNumber.solution(testcase3);
+        largestNumberAnswer = largestNumber.solution2(testcase3);
         System.out.println("Expected value : 12121, result : " + largestNumberAnswer);
+        largestNumberAnswer = largestNumber.solution2(testcase4);
+        System.out.println("Expected value : 21221, result : " + largestNumberAnswer);
+        largestNumberAnswer = largestNumber.solution2(testcase5);
+        System.out.println("Expected value : 0, result : " + largestNumberAnswer);
 
     }
 }
