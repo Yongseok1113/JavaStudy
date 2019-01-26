@@ -1,16 +1,6 @@
 package Execute;
 
-import Heap.DualPriorityQueue;
-import Heap.MoreSpicy;
-import Math.Combination;
-import Hash.Camouflage;
-import Hash.Marathon;
-import Hash.Phonebook;
-import Sort.KthNumber;
-import Sort.LargestNumber;
-import Stack.Ironbar;
-
-import Queue.Printer;
+import CodingTest.CodingTest1;
 
 public class main {
     public static void main(String[] args) {
@@ -135,7 +125,7 @@ public class main {
         int[][] commands1 = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
         kthNumResult = kthNumber.solution(testcase1, commands1);
         System.out.println("Expected value : [5, 6, 3], testcase1 result : " + kthNumResult);
-*/
+
         System.out.println("=======================  LargestNumber  ====================");
         LargestNumber largestNumber = new LargestNumber();
         int[] testcase1 = {6, 10, 2};	                     //Expected value : 6210
@@ -154,6 +144,23 @@ public class main {
         System.out.println("Expected value : 21221, result : " + largestNumberAnswer);
         largestNumberAnswer = largestNumber.solution2(testcase5);
         System.out.println("Expected value : 0, result : " + largestNumberAnswer);
+*/
+        System.out.println("=======================  CodingTest1  ====================");
+        CodingTest1 codingTest1 = new CodingTest1();
+        int[] testA = {7, 8, 10};
+        int[] testB = {10, 7, 8};
+        boolean an = true;
+        an = codingTest1.solution(testA, testB);
+        System.out.println(an);
 
+        int i= 15;
+        int []v = {15,5,3,7,9,14,0};
+        int d = 0;
+        d = codingTest1.solution2(i, v);
+        System.out.println(d);
+        int [][] board = {{11,13,15,16},{12,1,4,3},{10,2,7,8},{5,14,6,9}};
+        int [] nums = {14,3,2,4,13,1,16,11,5,15};
+        d = codingTest1.solution3(board, nums);
+        System.out.println(d);
     }
 }

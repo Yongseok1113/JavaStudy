@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d55808c-8237-444a-941f-4f416f69bb8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Execute/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sort/LargestNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sort/LargestNumber.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +19,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Execute/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="148" selection-start-line="148" selection-end-line="148" />
+            <state relative-caret-position="184">
+              <caret line="163" column="30" lean-forward="true" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sort/LargestNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="136" column="40" selection-start-line="136" selection-start-column="40" selection-end-line="136" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Queue/Printer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1254">
+              <caret line="275" column="26" lean-forward="true" selection-start-line="275" selection-start-column="26" selection-end-line="275" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,10 +47,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Sort/LargestNumber.java">
+        <entry file="file://$PROJECT_DIR$/src/CodingTest/CodingTest1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="136" column="40" lean-forward="true" selection-start-line="136" selection-start-column="40" selection-end-line="136" selection-end-column="40" />
+            <state relative-caret-position="267">
+              <caret line="74" column="39" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -79,8 +96,10 @@
         <option value="$PROJECT_DIR$/src/Heap/MoreSpicy.java" />
         <option value="$PROJECT_DIR$/src/Heap/DualPriorityQueue.java" />
         <option value="$PROJECT_DIR$/src/Sort/KthNumber.java" />
-        <option value="$PROJECT_DIR$/src/Execute/main.java" />
         <option value="$PROJECT_DIR$/src/Sort/LargestNumber.java" />
+        <option value="$PROJECT_DIR$/src/Execute/main.java" />
+        <option value="$PROJECT_DIR$/src/Queue/CodingTest1.java" />
+        <option value="$PROJECT_DIR$/src/CodingTest/CodingTest1.java" />
       </list>
     </option>
   </component>
@@ -120,7 +139,19 @@
               <item name="Datastructure" type="b2602c69:ProjectViewProjectNode" />
               <item name="Datastructure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="CodingTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Datastructure" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Datastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Execute" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Datastructure" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Datastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Queue" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -133,7 +164,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/ysoh/Documents/GitHub/JavaStudy/Datastructure/src/Execute/main.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547630725812" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548484284075" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/javapractice3/javapractice3/src/ysoh/hashmapPractice.java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -201,17 +232,18 @@
       <workItem from="1547097781394" duration="15995000" />
       <workItem from="1547521604920" duration="21655000" />
       <workItem from="1547605694983" duration="19787000" />
+      <workItem from="1548475598798" duration="8598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249349000" />
+    <option name="totallyTimeSpent" value="257947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1234" height="736" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6810631" visible="true" weight="0.24020442" />
-      <window_info id="Structure" order="1" sideWeight="0.31893688" side_tool="true" visible="true" weight="0.24020442" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.679402" visible="true" weight="0.24446337" />
+      <window_info id="Structure" order="1" sideWeight="0.320598" side_tool="true" visible="true" weight="0.24446337" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -322,9 +354,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Execute/main.java</url>
-          <line>148</line>
+          <line>162</line>
           <properties />
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -421,16 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Queue/Printer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -564,20 +586,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Execute/main.java">
+    <entry file="file://$PROJECT_DIR$/src/Sort/LargestNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="194">
+          <caret line="136" column="40" selection-start-line="136" selection-start-column="40" selection-end-line="136" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Queue/Printer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1254">
+          <caret line="275" column="26" lean-forward="true" selection-start-line="275" selection-start-column="26" selection-end-line="275" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sort/LargestNumber.java">
+    <entry file="file://$PROJECT_DIR$/src/Execute/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="136" column="40" lean-forward="true" selection-start-line="136" selection-start-column="40" selection-end-line="136" selection-end-column="40" />
+        <state relative-caret-position="184">
+          <caret line="163" column="30" lean-forward="true" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodingTest/CodingTest1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="74" column="39" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
         </state>
       </provider>
     </entry>
